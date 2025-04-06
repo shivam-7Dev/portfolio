@@ -3,7 +3,7 @@ name: Build and Deploy to S3
 on:
   push:
     branches:
-      - main  # or 'master' or any branch you want to trigger from
+      - master  # or 'master' or any branch you want to trigger from
 
 jobs:
   deploy:
