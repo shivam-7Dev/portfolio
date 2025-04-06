@@ -3,14 +3,14 @@ name: Build and Deploy to S3
 on:
   push:
     branches:
-      - master  # or your preferred branch
+      - master  # Trigger on push to master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -18,10 +18,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Build Vite app
+      - name: Build Vite App
         run: npm run build
 
       - name: Configure AWS Credentials
@@ -31,12 +31,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@v0.5.1
-        with:
-          args: --delete
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          source-dir: './dist'
-          destination-dir: 's3://${{ secrets.S3_BUCKET_NAME }}'
+      - name: Deploy to S3 using AWS CLI
+        run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} --delete
