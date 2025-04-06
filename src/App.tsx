@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import profileImage from './assets/profile.jpeg'; // You'll add your image here
 
