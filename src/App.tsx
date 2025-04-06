@@ -22,7 +22,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          This site is hosted using AWS Route 53, cloud front and s3
         </p>
       </div>
       <p className="read-the-docs">
