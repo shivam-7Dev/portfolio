@@ -34,6 +34,7 @@ function App() {
           <div className="skill-card">Microservices</div>
           <div className="skill-card">CI/CD</div>
           <div className="skill-card">Docker</div>
+          <div className="skill-card">GO lang</div>
         </div>
       </section>
 
