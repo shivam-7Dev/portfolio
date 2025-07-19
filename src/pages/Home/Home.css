@@ -192,3 +192,30 @@ p {
   line-height: 1.6;
   font-size: 16px;
 }
+
+@media (max-width: 768px) {
+  .portfolio-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem; /* reduced space */
+  }
+
+  .portfolio-header h1 {
+    font-size: 2rem; /* reduced from 3rem */
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+
+  .portfolio-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .profile-image-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .portfolio-container {
+    padding: 2rem 1rem;
+  }
+}

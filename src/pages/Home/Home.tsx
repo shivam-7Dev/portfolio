@@ -18,16 +18,6 @@ function Home() {
         </div>
       </header>
 
-      <section className="about-section">
-        <h3>About Me</h3>
-        <p>
-          I specialize in building modern web applications with React, Node.js,
-          and AWS cloud services. With expertise in full-stack development and
-          cloud architecture, I create scalable solutions that deliver
-          exceptional user experiences.
-        </p>
-      </section>
-
       <section className="skills-section">
         <h3>Technical Skills</h3>
         <div className="skills-grid">
@@ -36,6 +26,7 @@ function Home() {
           <div className="skill-card">Node.js</div>
           <div className="skill-card">AWS</div>
           <div className="skill-card">GraphQL</div>
+          <div className="skill-card">Express.js</div>
           <div className="skill-card">Microservices</div>
           <div className="skill-card">CI/CD</div>
           <div className="skill-card">Docker</div>
@@ -44,7 +35,7 @@ function Home() {
       </section>
 
       <section className="projects-section">
-        <h3>More About Me</h3>
+        <h3>About Me</h3>
 
         <div className="project-card">
           <h4>Self-Taught Journey</h4>
